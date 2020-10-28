@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aYU-gP-Ibt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yoA-Ge-Vmn">
+            <objects>
+                <tabBarController storyboardIdentifier="customer" automaticallyAdjustsScrollViewInsets="NO" id="aYU-gP-Ibt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="aeH-sf-CHX">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.083437152210000004" green="0.22229207819999999" blue="0.27718821170000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="systemYellowColor"/>
+                        <color key="barTintColor" red="0.083437152210000004" green="0.22229207819999999" blue="0.27718821170000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="g8R-cT-Jst" kind="relationship" relationship="viewControllers" id="0Ig-Wx-UyK"/>
+                        <segue destination="NnI-0L-DpA" kind="relationship" relationship="viewControllers" id="nVE-Es-Bwc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mzm-KG-ifQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175.19999999999999" y="145.27736131934034"/>
+        </scene>
+        <!--Ben-->
+        <scene sceneID="Bsw-Ok-RON">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Ben" id="g8R-cT-Jst" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="0hZ-oh-Lbs"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XCs-Mh-tvu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="145"/>
+        </scene>
+        <!--Bryson-->
+        <scene sceneID="2VQ-ts-CZ2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Bryson" id="NnI-0L-DpA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="DN7-0o-D9V" userLabel="&quot;tabbedBarController.findAFoodtruckButton&quot;"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qqq-1Y-xB8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175" y="595"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

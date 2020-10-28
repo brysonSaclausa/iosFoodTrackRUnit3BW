@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hXc-fX-qPH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Favorite Foodtrucks-->
+        <scene sceneID="BIW-Sf-77P">
+            <objects>
+                <viewController id="rEY-Es-LyW" customClass="FavoriteTrucksViewController" customModule="iosFoodTruckTrackR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4qH-md-DHB"/>
+                        <viewControllerLayoutGuide type="bottom" id="xuv-Ai-t4Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nwf-bU-hcQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rXp-HK-4nQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="j3W-hS-KJo"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j3W-hS-KJo" firstAttribute="bottom" secondItem="rXp-HK-4nQ" secondAttribute="bottom" id="OvF-6d-CjC"/>
+                            <constraint firstItem="rXp-HK-4nQ" firstAttribute="top" secondItem="j3W-hS-KJo" secondAttribute="top" id="QcR-RD-rLi"/>
+                            <constraint firstItem="rXp-HK-4nQ" firstAttribute="leading" secondItem="j3W-hS-KJo" secondAttribute="leading" id="R3e-RG-Fuc"/>
+                            <constraint firstItem="rXp-HK-4nQ" firstAttribute="trailing" secondItem="j3W-hS-KJo" secondAttribute="trailing" id="bV9-j0-2L2"/>
+                            <constraint firstItem="rXp-HK-4nQ" firstAttribute="leading" secondItem="j3W-hS-KJo" secondAttribute="leading" id="fHE-ka-6Us"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Favorite Foodtrucks" id="zcf-SS-v9k"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="rXp-HK-4nQ" id="gi5-GK-t9O"/>
+                        <segue destination="kW2-i2-ZLg" kind="show" identifier="loginsegue" id="OMI-Z8-jeV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TB7-SW-Mdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1650.7246376811595" y="144.64285714285714"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="5bO-Lj-Sqk">
+            <objects>
+                <viewController id="kW2-i2-ZLg" customClass="LoginViewController" customModule="iosFoodTruckTrackR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cxj-cw-sb7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tBu-HO-PF0">
+                                <rect key="frame" x="79" y="279" width="256.5" height="287.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FOODTRUCK FINDR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIf-ph-Q0F">
+                                        <rect key="frame" x="0.0" y="0.0" width="256.5" height="32.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="tdm-1u-HeZ">
+                                        <rect key="frame" x="28" y="32.5" width="200" height="255"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uWK-5Z-qqC">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="32"/>
+                                                <segments>
+                                                    <segment title="Sign Up"/>
+                                                    <segment title="Login"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="SignInTypeChanged:" destination="kW2-i2-ZLg" eventType="valueChanged" id="eNf-T6-TiE"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xp1-B2-Zbp">
+                                                <rect key="frame" x="0.0" y="35" width="200" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U0g-Bi-g7a">
+                                                <rect key="frame" x="0.0" y="73" width="200" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e8o-nt-1za">
+                                                <rect key="frame" x="0.0" y="111" width="200" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mMq-Lm-jRB">
+                                                <rect key="frame" x="0.0" y="149" width="200" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vUp-Av-4al">
+                                                <rect key="frame" x="0.0" y="187" width="200" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhD-Cn-HkS">
+                                                <rect key="frame" x="0.0" y="225" width="200" height="30"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Sign Up"/>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="kW2-i2-ZLg" eventType="touchUpInside" id="tJX-MH-xtL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="bpL-sd-VIO"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bD9-RY-iH3"/>
+                        <color key="backgroundColor" red="0.46659570929999999" green="0.59655499460000005" blue="0.59728795290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tBu-HO-PF0" firstAttribute="top" secondItem="bD9-RY-iH3" secondAttribute="top" constant="191" id="cUv-cM-f9n"/>
+                            <constraint firstItem="tBu-HO-PF0" firstAttribute="centerX" secondItem="cxj-cw-sb7" secondAttribute="centerX" id="ktT-Hn-EOy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cWo-Pe-qsP">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="e8o-nt-1za" id="mnf-yg-fAo"/>
+                        <outlet property="firstNameTextField" destination="Xp1-B2-Zbp" id="L99-k8-m0Y"/>
+                        <outlet property="lastNameTextField" destination="U0g-Bi-g7a" id="qkd-wP-sM2"/>
+                        <outlet property="passwordTextfield" destination="vUp-Av-4al" id="G9b-FI-b6U"/>
+                        <outlet property="signUpButton" destination="bhD-Cn-HkS" id="bpU-Xw-jdG"/>
+                        <outlet property="signUpSegmentedControl" destination="uWK-5Z-qqC" id="aG3-Ok-W1e"/>
+                        <outlet property="usernameTextField" destination="mMq-Lm-jRB" id="EU3-1z-lep"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZD-Xp-2UW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2605.7971014492755" y="144.64285714285714"/>
+        </scene>
+        <!--My Favorite Foodtrucks-->
+        <scene sceneID="usy-wa-Ppu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hXc-fX-qPH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Favorite Foodtrucks" image="star.fill" catalog="system" id="5mb-3y-HCw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pFe-7W-wS6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.46659570929999999" green="0.59655499460000005" blue="0.59728795290000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.083437152210000004" green="0.22229207819999999" blue="0.27718821170000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rEY-Es-LyW" kind="relationship" relationship="rootViewController" id="p4C-2D-xMy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OF6-Gv-DIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="145.27736131934034"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+    </resources>
+</document>
